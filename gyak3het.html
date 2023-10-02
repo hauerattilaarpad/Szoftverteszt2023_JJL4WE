@@ -65,6 +65,15 @@
 	QUnit.test('tiz', function(assert) {
       assert.equal(convertToRoman(10), 'X');
     });
+	QUnit.test('otven', function(assert) {
+      assert.equal(convertToRoman(50), 'L');
+    });
+	QUnit.test('otvennyolc', function(assert) {
+      assert.equal(convertToRoman(58), 'LVIII');
+    });
+	QUnit.test('hatvankilenc', function(assert) {
+      assert.equal(convertToRoman(69), 'LXIX');
+    });
 	
   });
 </script>
