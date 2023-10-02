@@ -9,25 +9,6 @@
 </body>
 <script>
 
-  /*function convert(n) {
-	if(n%10==0)
-	else if(n==9){
-	return "IX"
-	}
-	else if(n==5){
-	return "V";
-	} 
-	else if(n==4){
-	return "IV"
-	}
-	else if(n%1==0){
-	for(i=0;i<n;i++){
-	return "I";
-	}
-	
-	}
-    
-  }*/
   function convertToRoman(num) {
   var singles = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
   var tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
@@ -64,14 +45,18 @@
       assert.equal(convertToRoman(1), 'I');
     });
 	QUnit.test('ketto', function(assert) {
-      assert.equal(convertToRoman(2), 'III');
+      assert.equal(convertToRoman(2), 'II');
     });
 	QUnit.test('harom', function(assert) {
-      assert.equal(convertToRoman(1), 'III');
+      assert.equal(convertToRoman(3), 'III');
     });
 	QUnit.test('negy', function(assert) {
       assert.equal(convertToRoman(4), 'IV');
     });
+	QUnit.test('ot', function(assert) {
+      assert.equal(convertToRoman(5), 'V');
+    });
+	
 	QUnit.test('kilenc', function(assert) {
       assert.equal(convertToRoman(9), 'IX');
     });
