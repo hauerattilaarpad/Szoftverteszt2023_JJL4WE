@@ -86,6 +86,14 @@
 	QUnit.test('ötszazkilencvennyolc', function(assert) {
       assert.equal(convertToRoman(598), 'DXCVIII');
     });
-	
+	QUnit.test('nyolcszazkilencvenhet', function(assert) {
+      assert.equal(convertToRoman(897), 'DCCCXCVII');
+    });
+	QUnit.test('kilcszazkilencvenhet', function(assert) {
+      assert.equal(convertToRoman(997), 'CMXCVII');
+    });
+	QUnit.test('ezerotvenegy', function(assert) {
+      assert.equal(convertToRoman(1051), 'MLI');
+    });
   });
 </script>
