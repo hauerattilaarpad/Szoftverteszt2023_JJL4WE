@@ -77,6 +77,12 @@
 	QUnit.test('kilencvenkilenc', function(assert) {
       assert.equal(convertToRoman(99), 'XCIX');
     });
+	QUnit.test('szazkilencvenkilenc', function(assert) {
+      assert.equal(convertToRoman(199), 'CXCIX');
+    });
+	QUnit.test('negyszazkilencvenkilenc', function(assert) {
+      assert.equal(convertToRoman(499), 'CDXCIX');
+    });
 	
   });
 </script>
