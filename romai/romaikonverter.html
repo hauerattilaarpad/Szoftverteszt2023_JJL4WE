@@ -11,7 +11,7 @@
 
   function convertToRoman(num) {
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
-	var tens = ["", "X"];
+	var tens = ["", "X","XX"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -61,6 +61,9 @@
     });
 	QUnit.test('tizenegy', function(assert) {
       assert.equal(convertToRoman(11), 'XI');
+    });
+	QUnit.test('huszonketto', function(assert) {
+      assert.equal(convertToRoman(22), 'XXII');
     });
   });
   
