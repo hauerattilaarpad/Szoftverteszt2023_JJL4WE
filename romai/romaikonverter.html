@@ -10,7 +10,7 @@
 <script>
 
   function convertToRoman(num) {
-	var singles = ["", "I","II","III","IV","V"];
+	var singles = ["", "I","II","III","IV","V","VI"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -39,6 +39,9 @@
     });
 	QUnit.test('ot', function(assert) {
       assert.equal(convertToRoman(5), 'V');
+    });
+	QUnit.test('hat', function(assert) {
+      assert.equal(convertToRoman(6), 'VI');
     });
   });
   
