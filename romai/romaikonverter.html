@@ -20,7 +20,9 @@
 	var i = 0;
   
   switch (length) {
-  
+  case 4:
+    roman = thousands[numbers[i]];
+    i++;  
   case 3:
       roman += hundreds[numbers[i]];
       i++;
