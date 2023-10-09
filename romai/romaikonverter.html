@@ -11,13 +11,17 @@
 
   function convertToRoman(num) {
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
+	var tens = ["", "X"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
 	var i = 0;
   
   switch (length) {
-    case 1 :
+  case 2:
+      roman += tens[numbers[i]];
+      i++;
+  case 1 :
       roman += singles[numbers[i]];
   }
  return roman;
@@ -51,6 +55,9 @@
     });
 	QUnit.test('kilenc', function(assert) {
       assert.equal(convertToRoman(9), 'IX');
+    });
+	QUnit.test('tiz', function(assert) {
+      assert.equal(convertToRoman(10), 'X');
     });
   });
   
