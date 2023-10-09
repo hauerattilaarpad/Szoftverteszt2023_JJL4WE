@@ -12,7 +12,7 @@
   function convertToRoman(num) {
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
 	var tens = ["", "X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
-	var hundreds = ["", "C","CC","CCC","CD","D","DC"];
+	var hundreds = ["", "C","CC","CCC","CD","D","DC","DCC"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -107,6 +107,9 @@
   });
   QUnit.test('hatszaz', function(assert) {
       assert.equal(convertToRoman(600), 'DC');
+  });
+  QUnit.test('hetszaz', function(assert) {
+      assert.equal(convertToRoman(700), 'DCC');
   });
 
   });
