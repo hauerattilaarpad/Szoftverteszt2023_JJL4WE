@@ -10,7 +10,7 @@
 <script>
 
   function convertToRoman(num) {
-	var singles = ["", "I","II","III","IV","V","VI","VII","VIII"];
+	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -48,6 +48,9 @@
     });
 	QUnit.test('nyolc', function(assert) {
       assert.equal(convertToRoman(8), 'VIII');
+    });
+	QUnit.test('kilenc', function(assert) {
+      assert.equal(convertToRoman(9), 'IX');
     });
   });
   
