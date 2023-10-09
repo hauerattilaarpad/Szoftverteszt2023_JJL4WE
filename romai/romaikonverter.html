@@ -13,7 +13,7 @@
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
 	var tens = ["", "X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
 	var hundreds = ["", "C","CC","CCC","CD","D","DC","DCC","DCCC","CM"];
-  var thousands = ["", "M","MM","MMM"];
+  var thousands = ["", "M","MM","MMM","MMMM"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -129,6 +129,9 @@
   });
   QUnit.test('haromezerharomszazharmincharom', function(assert) {
       assert.equal(convertToRoman(3333), 'MMMCCCXXXIII');
+  });
+  QUnit.test('negyezernegyszaznegyvennegy', function(assert) {
+      assert.equal(convertToRoman(4444), 'MMMMCDXLIV');
   });
 
   });
