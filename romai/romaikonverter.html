@@ -12,7 +12,7 @@
   function convertToRoman(num) {
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
 	var tens = ["", "X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
-	var hundreds = ["", "C","CC"];
+	var hundreds = ["", "C","CC","CCC"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -93,9 +93,12 @@
 	QUnit.test('szaz', function(assert) {
       assert.equal(convertToRoman(100), 'C');
     });
-    QUnit.test('ketszaz', function(assert) {
+  QUnit.test('ketszaz', function(assert) {
       assert.equal(convertToRoman(200), 'CC');
-    });
+  });
+  QUnit.test('haromszaz', function(assert) {
+      assert.equal(convertToRoman(300), 'CCC');
+  });
   });
   
 </script>
