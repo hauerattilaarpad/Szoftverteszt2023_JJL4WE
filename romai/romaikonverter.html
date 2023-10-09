@@ -11,7 +11,7 @@
 
   function convertToRoman(num) {
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
-	var tens = ["", "X","XX","XXX","XL"];
+	var tens = ["", "X","XX","XXX","XL","L"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -70,6 +70,9 @@
     });
 	QUnit.test('negyvennegy', function(assert) {
       assert.equal(convertToRoman(44), 'XLIV');
+    });
+	QUnit.test('otvenot', function(assert) {
+      assert.equal(convertToRoman(55), 'LV');
     });
   });
   
