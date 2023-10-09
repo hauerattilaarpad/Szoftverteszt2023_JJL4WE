@@ -10,7 +10,7 @@
 <script>
 
   function convertToRoman(num) {
-	var singles = ["", "I"];
+	var singles = ["", "I","II"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -24,9 +24,12 @@
 }
 
 
-  QUnit.module('negy', function() {
+  QUnit.module('romai konverter', function() {
     QUnit.test('egy', function(assert) {
       assert.equal(convertToRoman(1), 'I');
+    });
+	QUnit.test('ketto', function(assert) {
+      assert.equal(convertToRoman(2), 'II');
     });
   });
   
