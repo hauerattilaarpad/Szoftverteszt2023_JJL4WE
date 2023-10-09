@@ -13,12 +13,14 @@
 	var singles = ["", "I","II","III","IV","V","VI","VII","VIII","IX"];
 	var tens = ["", "X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
 	var hundreds = ["", "C","CC","CCC","CD","D","DC","DCC","DCCC","CM"];
+  var thousands = ["", "M"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
 	var i = 0;
   
   switch (length) {
+  
   case 3:
       roman += hundreds[numbers[i]];
       i++;
@@ -116,6 +118,9 @@
   });
   QUnit.test('kilencszaz', function(assert) {
       assert.equal(convertToRoman(900), 'CM');
+  });
+  QUnit.test('ezer', function(assert) {
+      assert.equal(convertToRoman(1000), 'M');
   });
 
   });
