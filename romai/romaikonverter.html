@@ -10,7 +10,7 @@
 <script>
 
   function convertToRoman(num) {
-	var singles = ["", "I","II","III"];
+	var singles = ["", "I","II","III","IV"];
 	var length = num.toString().length;
 	var numbers = num.toString().split("").map(Number);
 	var roman = '';
@@ -33,6 +33,9 @@
     });
 	QUnit.test('harom', function(assert) {
       assert.equal(convertToRoman(3), 'III');
+    });
+	QUnit.test('negy', function(assert) {
+      assert.equal(convertToRoman(4), 'IV');
     });
   });
   
