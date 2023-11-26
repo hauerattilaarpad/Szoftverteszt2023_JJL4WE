@@ -18,9 +18,25 @@ class holdjaroteszt(unittest.TestCase):
     result = rover.lepes('f')
     self.assertEqual(result, (0, -1, 'S'))
 
+  def test_forward_east(self):
+    rover = holdjaro(0, 0, 'E')
+    result = rover.lepes('f')
+    self.assertEqual(result, (1, 0, 'E'))
 
+  def test_forward_west(self):
+    rover = holdjaro(0, 0, 'W')
+    result = rover.lepes('f')
+    self.assertEqual(result, (-1, 0, 'W'))
 
+  def test_right(self):
+    rover = holdjaro(0, 0, 'E')
+    result = rover.lepes('r')
+    self.assertEqual(result, (0, 0, 'S'))
 
+  def test_left(self):
+    rover = holdjaro(0, 0, 'N')
+    result = rover.lepes('l')
+    self.assertEqual(result, (0, 0, 'W'))
 
 if __name__ == '__main__':
 
