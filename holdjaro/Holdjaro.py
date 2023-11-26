@@ -1,9 +1,9 @@
 class holdjaro:
-  def __init__(self, x, y, direction):
+  def __init__(self, x, y, direction, obstacles):
     self.x = x
     self.y = y
     self.direction = direction
-
+    self.obstacles = obstacles
   def lepes(self, moves):
     for m in moves:
       if m == 'f':
@@ -48,5 +48,8 @@ class holdjaro:
 
       else:
         raise ValueError("rossz lépés!")
+
+    if (self.x, self.y) in self.obstacles:
+      return "Vigyázz akadály"
 
     return self.x, self.y, self.direction
