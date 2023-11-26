@@ -13,7 +13,10 @@ class holdjaroteszt(unittest.TestCase):
 
     self.assertEqual(result, (0, 1, 'N'))
 
-
+  def test_forward_south(self):
+    rover = holdjaro(0, 0, 'S')
+    result = rover.lepes('f')
+    self.assertEqual(result, (0, -1, 'S'))
 
 
 
