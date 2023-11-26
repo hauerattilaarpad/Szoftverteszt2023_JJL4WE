@@ -38,6 +38,11 @@ class holdjaroteszt(unittest.TestCase):
     result = rover.lepes('l')
     self.assertEqual(result, (0, 0, 'W'))
 
+  def test_backward(self):
+    rover = holdjaro(0, 0, 'E')
+    result = rover.lepes('b')
+    self.assertEqual(result, (1, 0, 'E'))
+      
 if __name__ == '__main__':
 
   unittest.main()
